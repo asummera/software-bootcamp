@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Michael's AP",
+        "type": "MX65",
+        "mac address": "e0:55:3d:17:d4:23",
+        "serial": "Q2QN-9J8L-SLPD",
+        "category": "Meraki"
+    },
+    {
+        "name": "Testing-Devnet",
+        "type": "MR53",
+        "mac address": "88:15:44:60:21:10",
+        "serial": "Q2MD-BHHS-5FDL",
+        "category": "Meraki"
+    },
+    {
+        "name": "asr1001-x.abc.inc",
+        "type": "Cisco ASR 1001-X Router",
+        "mac address": "00:c8:8b:80:bb:00",
+        "serial": "FXS1932Q1SE",
+        "category": "DNA Center"
+    },
+    {
+        "name": "cat_9k_1",
+        "type": "Cisco Catalyst 9300 Switch",
+        "mac address": "f8:7b:20:67:62:80",
+        "serial": "FCW2136L0AK",
+        "category": "DNA Center"
+    },
+    {
+        "name": "cat_9k_2",
+        "type": "Cisco Catalyst 9300 Switch",
+        "mac address": "f8:7b:20:71:4d:80",
+        "serial": "FCW2140L039",
+        "category": "DNA Center"
+    },
+    {
+        "name": "cs3850.abc.inc",
+        "type": "Cisco Catalyst38xx stack-able ethernet switch",
+        "mac address": "cc:d8:c1:15:d2:80",
+        "serial": "FOC1833X0AR",
+        "category": "DNA Center"
+    }
+]
