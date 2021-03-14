@@ -19,3 +19,4 @@
 /dc/.DS_Store
 /dc/__pycache__/
 /dc/.gitignore
+/dc/venv
