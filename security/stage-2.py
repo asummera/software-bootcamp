@@ -5,6 +5,7 @@ import env
 import pandas as pd 
 from pprint import pprint
 import json
+import sys
 
 amp_host = env.AMP.get("host")
 amp_client_id = env.AMP.get("client_id")
@@ -73,16 +74,20 @@ if len(response.json()['data'])>0:
             else:
                 raise SystemExit(err)
 
-        # Search for a submission in threadgrid:
+        # Search for a submission in threadgrid
         url = f"{tg_base_url}/search/submissions?state=succ&q={tg_sha}&api_key={tg_api_key}"
         inv_response = requests.get(url, headers=headers)
         inv_response.raise_for_status()
         submissions = inv_response.json()['data']['items']
 
-        for sub in submissions:
-            if sub['item']['sha256'] == file_hash:
-                print('The sample has been submitted before!')
-                sample = sub['item']['sample']
+        submissions = list(filter(lambda x: x["item"]['sha256']==file_hash, inv_response.json()['data']['items']))
+        if len(submissions) > 0:
+            print('The sample has been submitted before!')
+            sample = submissions[0]['item']['sample']
+        
+        else:
+            print("File has not yet been submitted in ThreadGrid.")
+            sys.exit()
 
         # Check for a domain that have been seen for the sample:
         url = f"{tg_base_url}/samples/feeds/domains?q={tg_sha}&api_key={tg_api_key}&sample={sample}"
