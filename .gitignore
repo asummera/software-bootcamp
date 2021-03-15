@@ -5,6 +5,7 @@
 /en/env.py
 /en/venv/
 /en/__pycache__/
+/en/.gitignore
 /security/bin/
 /security/lib/
 /security/venv/
